@@ -1,0 +1,109 @@
+@import './scss/variables';
+@import 'bootstrap';
+
+html, body, noscript {
+  height: 100%;
+}
+
+.noscript {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: $primary;
+  color: $white;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.swal-text {
+  text-align: center;
+}
+
+.btn {
+  i {
+    margin-right: 0.4rem;
+  }
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.site-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+nav {
+  border-top: 3px solid $primary;
+}
+
+.footer {
+  background: $dark;
+  color: $light;
+  padding: 1rem 0;  
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__copyright {
+    flex-grow: 1;
+  }
+
+  &__songkick {
+    img {
+      height: 36px;
+    }
+  }
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &__spinner {
+    height: 1.4rem;
+    width: 1.4rem;
+    margin-right: 0.4rem;
+  }
+}
+
+.page {
+  display: flex;
+  flex-grow: 1;
+  padding-top: 2rem;
+
+  &--home {
+    background: url('/img/bg.jpg');
+    background-position: bottom;
+    background-size: cover;
+    color: $light;
+    justify-content: center;
+    padding-top: 10%;
+    text-align: center;
+  }
+
+  &--create {
+    background: $light;
+  }
+}
+
+.spotify-player {
+  height: 60vh;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SECRET_KEY": "",
+    "HOST_URL": "http://localhost:7071",
+    "FRONTEND_URL":  "http://localhost:3000",
+    "SONGKICK_API_KEY": "",
+    "SPOTIFY_CLIENT_ID": "",
+    "SPOTIFY_CLIENT_SECRET": ""
+  },
+  "Host": {
+    "CORS": "*"
+  }
+}

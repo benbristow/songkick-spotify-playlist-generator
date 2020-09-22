@@ -1,0 +1,22 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+
+$primary: #F80046;
+$dark: #1E2126;
+$light: #f2f2f2;
+
+$spotify-green: #1DB954;
+
+$font-family-sans-serif: 'Heebo', sans-serif;
+
+$link-color: $primary;
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
+
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary,
+  "dark": $dark,
+  "light": $light,
+  "spotify": $spotify-green
+));

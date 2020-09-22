@@ -1,0 +1,26 @@
+name: Deploy to Azure Storage
+
+on:
+  [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
+      - run: npm run build
+      
+      - name: Azure Blob Storage Upload
+        uses: bacongobbler/azure-blob-storage-upload@v1.1.0
+        with:
+          connection_string: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          container_name: '$web'
+          source_dir: 'build'
+          sync: true
