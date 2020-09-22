@@ -14,7 +14,7 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     } catch (ex) {
         context.res = {
             body: {
-                error: ex.message
+                error: JSON.stringify(ex)
             }
         }
     }
