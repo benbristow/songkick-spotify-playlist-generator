@@ -1,7 +1,4 @@
 {
-  "name": "funcs",
-  "version": "1.0.0",
-  "description": "",
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
