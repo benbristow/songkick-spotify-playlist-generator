@@ -1,6 +1,6 @@
 import { OAuth2 } from 'oauth';
 
-const redirect_uri = `${process.env.HOST_URL}/api/AuthenticateCallback`;
+const redirect_uri = `${process.env.API_URL}/api/AuthenticateCallback`;
 
 const spotifyOauthProvider = new OAuth2(
   process.env.SPOTIFY_CLIENT_ID,
