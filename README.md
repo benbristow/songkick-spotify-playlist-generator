@@ -1,1 +1,1 @@
-# Spotify Songkick Playlist Generator Webapp
+# Spotify Songkick Playlist Generator
