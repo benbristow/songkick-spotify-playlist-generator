@@ -15,5 +15,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/GetToken/index.js"
+  "scriptFile": "../dist/AuthenticateCallback/index.js"
 }

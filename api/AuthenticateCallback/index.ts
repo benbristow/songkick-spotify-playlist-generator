@@ -1,4 +1,5 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
+import StatusCode from "status-code-enum";
 
 import { getSpotifyToken } from "../lib/authenticationHelper";
 import { createJwtToken } from "../lib/tokenHelper";
@@ -8,8 +9,9 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
     const jwtToken = createJwtToken(spotifyToken);
 
     context.res = {
-        body: {
-            token: jwtToken
+        status: StatusCode.RedirectFound,
+        headers: {
+            location: `${process.env.FRONTEND_URL}/?token=${jwtToken}`
         }
     };
 };
