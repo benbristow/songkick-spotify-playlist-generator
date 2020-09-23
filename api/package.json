@@ -7,7 +7,6 @@
     "test": "echo \"No tests yet...\""
   },
   "devDependencies": {
-    "@azure/functions": "^1.2.2",
     "@types/axios": "^0.14.0",
     "@types/jsonwebtoken": "^8.5.0",
     "@types/lodash": "^4.14.157",
@@ -16,6 +15,7 @@
     "typescript": "^3.3.3"
   },
   "dependencies": {
+    "@azure/functions": "^1.2.2",
     "dayjs": "^1.8.29",
     "axios": "^0.19.2",
     "jsonwebtoken": "^8.5.1",
