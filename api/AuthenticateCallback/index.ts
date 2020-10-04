@@ -10,6 +10,9 @@ const httpTrigger: AzureFunction = async function (context: Context, req: HttpRe
 
     context.res = {
         status: StatusCode.RedirectFound,
+        body: {
+            redirectUrl: `${process.env.FRONTEND_URL}/?token=${jwtToken}`
+        },
         headers: {
             location: `${process.env.FRONTEND_URL}/?token=${jwtToken}`
         }
