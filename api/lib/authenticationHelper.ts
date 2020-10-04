@@ -22,7 +22,7 @@ export const getSpotifyAuthorizeUrl = (): string => {
 
 export const getSpotifyToken = (code: string): Promise<string> => {
   return new Promise(async (resolve, reject) => {
-    spotifyOauthProvider.getOAuthAccessToken(code, { grant_type: 'authorization_code', redirect_uri }, (data, token) => {
+    spotifyOauthProvider.getOAuthAccessToken(code, { grant_type: 'authorization_code', redirect_uri }, (_data, token) => {
       if (token) {
         resolve(token);
         return;
