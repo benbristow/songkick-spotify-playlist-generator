@@ -1,11 +1,11 @@
 {
   "IsEncrypted": false,
   "Values": {
-    "FUNCTIONS_WORKER_RUNTIME": "node",
-    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
-    "SECRET_KEY": "",
     "API_URL": "http://localhost:7071",
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
     "FRONTEND_URL":  "http://localhost:3000",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "SECRET_KEY": "",
     "SONGKICK_API_KEY": "",
     "SPOTIFY_CLIENT_ID": "",
     "SPOTIFY_CLIENT_SECRET": ""
