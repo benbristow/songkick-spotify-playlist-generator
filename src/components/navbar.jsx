@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
-import { deleteJwtToken, authenticated } from "../helpers/authenticationHelper";
+import { DeleteJwtToken, IsAuthenticated } from "../helpers/authenticationHelper";
 
 import { Button } from "./button";
 
 const Navbar = () => {
     const [loading, setLoading] = useState(false);
-    const isAuthenticated = authenticated();
+    const isAuthenticated = IsAuthenticated();
 
     const logout = () => {
         setLoading(true);
-        deleteJwtToken();
+        DeleteJwtToken();
         window.location.reload();
     }
 

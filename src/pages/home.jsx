@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 
 import { getAuthenticateUrl } from "../apiClient";
 import { showError } from "../helpers/messageHelper";
-import { authenticated } from '../helpers/authenticationHelper';
+import { IsAuthenticated } from '../helpers/authenticationHelper';
 import { Button } from '../components/button';
 
 export const HomePage = () => {
   const [loading, setLoading] = useState(false);
 
-  if (authenticated()) {
+  if (IsAuthenticated()) {
     window.location.reload();
     return null;
   }

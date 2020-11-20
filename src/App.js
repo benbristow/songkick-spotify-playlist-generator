@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
 import queryString from 'query-string';
 
-import { authenticated, setJwtToken } from "./helpers/authenticationHelper";
+import { IsAuthenticated, SetJwtToken } from "./helpers/authenticationHelper";
 
 import { Footer } from './components/footer';
 import Navbar from "./components/navbar";
@@ -13,7 +13,7 @@ import { HomePage } from "./pages/home";
 const App = () => {
     const query = queryString.parse(window.location.search);
     if (query.token) {
-        setJwtToken(query.token);
+        SetJwtToken(query.token);
         window.location.search = '';
     }
 
@@ -23,8 +23,8 @@ const App = () => {
                 <Router>
                     <Navbar/>
                     <Switch>
-                        <ProtectedRoute path="/create" fallbackPath="/" active={authenticated()} component={CreatePage} />
-                        <ProtectedRoute path="/" fallbackPath="/create" active={!authenticated()} component={HomePage} />
+                        <ProtectedRoute path="/create" fallbackPath="/" active={IsAuthenticated()} component={CreatePage} />
+                        <ProtectedRoute path="/" fallbackPath="/create" active={!IsAuthenticated()} component={HomePage} />
                     </Switch>
                 </Router>
             </div>

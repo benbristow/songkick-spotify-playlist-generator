@@ -2,14 +2,14 @@ import axios from 'axios';
 
 import config from './config';
 
-import { getJwtToken } from "./helpers/authenticationHelper";
+import { GetJwtToken } from "./helpers/authenticationHelper";
 
 const instance = axios.create({
     baseURL: config.apiUrl
 });
 
-const getAuthenticationHeaders = () => ({
-    Token: getJwtToken()
+const GetAuthenticationHeaders = () => ({
+    "Access-Token": GetJwtToken()
 })
 
 export const getAuthenticateUrl = async () => {
@@ -18,6 +18,6 @@ export const getAuthenticateUrl = async () => {
 }
 
 export const createPlaylist = async (username) => {
-    const response = await instance.post('/CreatePlaylist', { username }, { headers: getAuthenticationHeaders() });
+    const response = await instance.post('/CreatePlaylist', { username }, { headers: GetAuthenticationHeaders() });
     return response;
 }

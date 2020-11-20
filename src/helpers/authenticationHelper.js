@@ -1,17 +1,17 @@
 const jwtTokenKey = "jwt_token";
 
-export const setJwtToken = (token) => {
+export const SetJwtToken = (token) => {
     window.sessionStorage.setItem(jwtTokenKey, token);
 }
 
-export const getJwtToken = () => {
+export const GetJwtToken = () => {
     return window.sessionStorage.getItem(jwtTokenKey);
 }
 
-export const authenticated = () => {
-    return Boolean(getJwtToken());
+export const IsAuthenticated = () => {
+    return Boolean(GetJwtToken());
 }
 
-export const deleteJwtToken = () => {
+export const DeleteJwtToken = () => {
     return window.sessionStorage.removeItem(jwtTokenKey);
 }
