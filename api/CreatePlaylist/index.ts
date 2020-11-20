@@ -1,13 +1,13 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
 
-import { generateSpotifyPlaylistFromSongkickUser } from "../lib/playlistHelper";
-import { decodeSpotifyToken } from "../lib/tokenHelper";
+import { GenerateSpotifyPlaylistFromSongkickUser } from "../lib/playlistHelper";
+import { DecodeSpotifyToken } from "../lib/tokenHelper";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    const token = decodeSpotifyToken(req.headers.token);
+    const token = DecodeSpotifyToken(req.headers.token);
     const songkickUsername = req.body.username;
 
-    const playlist = await generateSpotifyPlaylistFromSongkickUser(token, songkickUsername);
+    const playlist = await GenerateSpotifyPlaylistFromSongkickUser(token, songkickUsername);
 
     context.res = {
         body: {

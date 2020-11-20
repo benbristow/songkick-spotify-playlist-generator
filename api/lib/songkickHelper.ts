@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
     baseURL: 'https://api.songkick.com/api/3.0'
 })
 
-export const getUserCalendar = async (username: string): Promise<ISongkickCalendarEntry[]> => {
+export const GetUserCalendar = async (username: string): Promise<ISongkickCalendarEntry[]> => {
     const response = await axiosInstance.get<ISongkickCalendarResponse>(`/users/${username}/calendar.json`, {
         params: {
             apikey: apiKey,

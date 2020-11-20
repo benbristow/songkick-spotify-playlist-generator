@@ -1,9 +1,9 @@
 import { AzureFunction, Context, HttpRequest } from '@azure/functions';
 
-import { getSpotifyAuthorizeUrl } from '../lib/authenticationHelper';
+import { GetSpotifyAuthorizeUrl } from '../lib/authenticationHelper';
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
-    const authorizeUrl = getSpotifyAuthorizeUrl();
+    const authorizeUrl = GetSpotifyAuthorizeUrl();
 
     context.res = {
         body: {

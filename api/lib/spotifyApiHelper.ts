@@ -7,7 +7,7 @@ const spotifyApi = new SpotifyWebApi({
     clientSecret: process.env.SPOTIFY_CLIENT_SECRET
 });
 
-export const getArtistTopTracks = async (token: string, artistName: string) => {
+export const GetArtistTopTracks = async (token: string, artistName: string) => {
     spotifyApi.setAccessToken(token);
 
     const results = await spotifyApi.searchTracks(`artist:${artistName}`);
@@ -15,7 +15,7 @@ export const getArtistTopTracks = async (token: string, artistName: string) => {
     return results.body.tracks.items.slice(0, 10);
 }
 
-export const createPlaylist = async (token: string, tracks: SpotifyApi.TrackObjectFull[]): Promise<SpotifyApi.CreatePlaylistResponse> => {
+export const CreatePlaylist = async (token: string, tracks: SpotifyApi.TrackObjectFull[]): Promise<SpotifyApi.CreatePlaylistResponse> => {
     spotifyApi.setAccessToken(token);
 
     const meResponse = await spotifyApi.getMe();
