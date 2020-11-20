@@ -32,9 +32,6 @@ export const HomePage = () => {
         <p className="lead">
           Auto-magically generate a Spotify Playlist with songs from bands of your upcoming gigs via your Songkick calendar
         </p>
-        <div className="alert alert-danger">
-          Currently broken due to Azure updates. See <a href="https://github.com/Azure/static-web-apps/issues/165" target="_blank" rel="noopener noreferrer">GitHub</a> for more info.
-        </div>
         <Button theme="spotify" icon="spotify" size="lg" loading={loading} onClick={startAuth}>Login with Spotify</Button>
       </div>
     </div>
