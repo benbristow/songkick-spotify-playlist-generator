@@ -9,7 +9,7 @@ const instance = axios.create({
 });
 
 const GetAuthenticationHeaders = () => ({
-    "Access-Token": GetJwtToken()
+    "access-token": GetJwtToken()
 })
 
 export const getAuthenticateUrl = async () => {
