@@ -4,6 +4,8 @@ import { GenerateSpotifyPlaylistFromSongkickUser } from "../lib/playlistHelper";
 import { DecodeSpotifyToken } from "../lib/tokenHelper";
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {
+    throw req.headers;
+
     const token = DecodeSpotifyToken(req.headers["Access-Token"]);
     const songkickUsername = req.body.username;
 
