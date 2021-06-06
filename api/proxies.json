@@ -1,10 +1,10 @@
 ﻿{
   "$schema": "https://json.schemastore.org/proxies",
   "proxies": {
-    "callback": {
+    "Callback": {
       "matchCondition": {
         "methods": ["GET"],
-        "route": "/api/callback"
+        "route": "/api/Callback"
       },
       "backendUri": "http://localhost/api/AuthenticateCallback",
       "requestOverrides": {
