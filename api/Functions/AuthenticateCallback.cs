@@ -20,7 +20,7 @@ namespace SongkickSpotifyPlaylistGenerator.Functions
         public async Task<IActionResult> RunAsync(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
         {
-            var accessToken = await _authenticationService.GetSpotifyAccessTokenAsync(req.Query["code"]);
+            var accessToken = await _authenticationService.GetSpotifyAccessTokenAsync(req.Query["_code"]);
 
             var jwtToken = _authenticationService.CreateJwtToken(accessToken);
 
