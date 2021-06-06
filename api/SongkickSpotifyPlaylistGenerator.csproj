@@ -23,12 +23,4 @@
           <CopyToPublishDirectory>Never</CopyToPublishDirectory>
         </None>
     </ItemGroup>
-    <ItemGroup>
-      <Reference Include="Microsoft.IdentityModel.Tokens, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-        <HintPath>..\..\..\Users\Ben Bristow\AppData\Roaming\JetBrains\Rider2021.1\azure-functions-coretools\3.0.3568\Microsoft.IdentityModel.Tokens.dll</HintPath>
-      </Reference>
-      <Reference Include="System.IdentityModel.Tokens.Jwt, Version=5.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
-        <HintPath>..\..\..\Users\Ben Bristow\AppData\Roaming\JetBrains\Rider2021.1\azure-functions-coretools\3.0.3568\System.IdentityModel.Tokens.Jwt.dll</HintPath>
-      </Reference>
-    </ItemGroup>
 </Project>
