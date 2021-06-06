@@ -20,7 +20,7 @@ namespace SongkickSpotifyPlaylistGenerator.Services
     public class AuthenticationService : IAuthenticationService
     {
         private readonly ISpotifyService _spotifyService;
-        private static Uri RedirectUri => new Uri($"{Config.Urls.ApiUrl}/api/{nameof(AuthenticateCallback)}");
+        private static Uri RedirectUri => new Uri($"{Config.Urls.ApiUrl}/api/callback");
 
         private static SigningCredentials JwtSigningCredentials => new SigningCredentials(
             new SymmetricSecurityKey(Encoding.ASCII.GetBytes(Config.SecretKey)),
