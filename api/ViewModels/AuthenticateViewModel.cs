@@ -1,4 +1,5 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace SongkickSpotifyPlaylistGenerator.ViewModels
 {
@@ -9,6 +10,7 @@ namespace SongkickSpotifyPlaylistGenerator.ViewModels
             Url = uri.ToString();
         }
 
+        [JsonProperty]
         public string Url { get; }
     }
 }

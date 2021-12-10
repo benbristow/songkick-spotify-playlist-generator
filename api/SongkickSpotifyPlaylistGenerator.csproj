@@ -1,17 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.1</TargetFramework>
-        <AzureFunctionsVersion>V3</AzureFunctionsVersion>
+        <TargetFramework>net6.0</TargetFramework>
+        <AzureFunctionsVersion>V4</AzureFunctionsVersion>
         <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
-        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.11.1" />
-        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.11.1" />
-        <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
-        <PackageReference Include="SpotifyAPI.Web" Version="6.2.0" />
-        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
+        <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.OpenApi" Version="1.0.0" />
+        <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.15.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.15.0" />
+        <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.0.1" />
+        <PackageReference Include="SpotifyAPI.Web" Version="6.2.2" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.0" />
     </ItemGroup>
     <ItemGroup>
         <None Update="host.json">

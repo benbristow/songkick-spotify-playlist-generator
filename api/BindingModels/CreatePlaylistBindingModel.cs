@@ -1,7 +1,10 @@
-﻿namespace SongkickSpotifyPlaylistGenerator.BindingModels
+﻿using Newtonsoft.Json;
+
+namespace SongkickSpotifyPlaylistGenerator.BindingModels
 {
     public class CreatePlaylistBindingModel
     {
-        public string Username { get; set; }
+        [JsonProperty(Required = Required.Always)]
+        public string Username { get; init; }
     }
 }
